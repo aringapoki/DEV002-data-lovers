@@ -6,7 +6,7 @@ import data from './data/ghibli/ghibli.js';
 //console.log(example, data);
 //console.log (data.films[0].poster)
 
-const prueba = document.getElementById("prueba")
+//const prueba = document.getElementById("prueba")
 //prueba.innerHTML = ` 
 //<div class= "prueba"> ${data.films[0].director} ${data.films[0].title}</div>
 //<img src="${data.films[0].poster}" />`
@@ -39,7 +39,7 @@ data.films.forEach(element => {
 
 })
 
-let inicio = document.getElementById("peliculas");
+let inicio = document.getElementById("boton");
 inicio.addEventListener("click", Mostrarpantalla2);
 function Mostrarpantalla2() {
     document.getElementById("pantalla1").style.display = "none"
