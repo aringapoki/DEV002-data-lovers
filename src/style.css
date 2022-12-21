@@ -41,7 +41,6 @@ header {
 h1 {
     color: white;
     text-align: center;
-    font-family: 'Black Han Sans', sans-serif;
     background-position: center;
     font-size: 50px;
     margin: 70px 600px;
@@ -50,7 +49,6 @@ h1 {
 
 #boton {
     border-radius: 50px;
-    font-family: 'Black Han Sans', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     color: black;
@@ -87,7 +85,6 @@ h1 {
     font-size: 50px;
     margin: 0 auto;
     text-transform: uppercase;
-    font-family: 'Black Han Sans', sans-serif;
 }
 
 #mejores-peliculas {
@@ -98,7 +95,6 @@ h1 {
     max-height: 60px;
     margin: auto;
     background-color: lightpink;
-    font-family: 'Black Han Sans', sans-serif;
 
 }
 
@@ -160,7 +156,6 @@ h1 {
     padding: 4px;
     margin: 20px;
     font-weight: bold;
-    font-family: 'Black Han Sans', sans-serif;
 }
 
 #description {
@@ -201,7 +196,6 @@ h1 {
 
 .open {
     border-radius: 10px;
-    font-family: 'Black Han Sans', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     width: 70%;
@@ -219,7 +213,6 @@ h1 {
 
 .close {
     border-radius: 10px;
-    font-family: 'Black Han Sans', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     width: 50%;
@@ -233,4 +226,8 @@ h1 {
 
 .close:hover {
     background-color:rgb(206, 218, 206); 
+}
+
+@media (max-width: 592px){
+
 }

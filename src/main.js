@@ -1,11 +1,17 @@
+
 //import { filtrarpeliculas } from './data.js';
 // import data from './data/lol/lol.js';
+import { filtrarPeliculas, ordenarAsc, ordenarDesc } from './data.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 let dataGhibli = data.films
-//let search = document.getElementById("search").value
-let search = dataGhibli[0].title
-console.log(search)
+console.log(typeof dataGhibli)
+let search = document.getElementById("search")
+//let orden = document.getElementById("ordenarPor")
+let asc = document.getElementById("asc")
+let desc = document.getElementById("desc")
+//let search = dataGhibli[0].title
+//console.log(search)
 //console.log(dataGhibli);
 //console.log (data.films[0].poster)
 
@@ -13,26 +19,29 @@ console.log(search)
 //prueba.innerHTML = ` 
 //<div class= "prueba"> ${data.films[0].director} ${data.films[0].title}</div>
 //<img src="${data.films[0].poster}" />`
+
 let cards = document.getElementById("cards")
 
 document.getElementById("pantalla1").style.display = "inline";
 document.getElementById("pantalla2").style.display = "none";
 
 let inicio = document.getElementById("boton");
-inicio.addEventListener("click", Mostrarpantalla2);
-function Mostrarpantalla2() {
+
+function mostrarPantallaDos() {
+
     document.getElementById("pantalla1").style.display = "none"
     document.getElementById("pantalla2").style.display = "inline"
+    displayCards(dataGhibli)
 }
+ inicio.addEventListener ("click", mostrarPantallaDos);
 
-/*const displayCard = (data) => {
-    cards.innerHTML = ""*/
-
-data.films.forEach(element => {
+const displayCards = (data) => {
+    data.forEach(element => {
     let newDiv = document.createElement("div")
     newDiv.className = "card"
 
     newDiv.innerHTML += `
+  
     <div class ="imgDatos" id="imgDatos">
     <img id="poster" src="${element.poster}"/>
     <div class ="parrafos">
@@ -54,26 +63,41 @@ data.films.forEach(element => {
   cards.appendChild(newDiv)
 })
 
-//let description = document.querySelectorAll(".modal")
-//console.log(description)
 
 const open = document.querySelectorAll(".open");
-console.log(open)
+//console.log(open)
 const close = document.querySelectorAll(".close");
 
 open.forEach(element => {
   element.addEventListener('click', (e) => {
-    console.log(e.target.classList[1])
+    //console.log(e.target.classList[1])
     let modalContainer = document.getElementById(e.target.classList[1])
     modalContainer.classList.add("show");
-    console.log(modalContainer)
+    //console.log(modalContainer)
   });
 })
 
 close.forEach(element => {
   element.addEventListener('click', (e) => {
-    console.log(e.target.classList[1])
+    //console.log(e.target.classList[1])
     let modalContainer = document.getElementById(e.target.classList[1])
     modalContainer.classList.remove("show");
   });
+})
+}
+
+search.addEventListener("input",()=>{
+  cards.innerHTML=""
+  //console.log(filtrarPeliculas(dataGhibli,search.value))
+  displayCards(filtrarPeliculas(dataGhibli,search.value))
+});
+
+asc.addEventListener("click",()=>{
+    cards.innerHTML = ""
+     displayCards(ordenarAsc(dataGhibli))
+})
+
+desc.addEventListener("click",()=>{
+  cards.innerHTML = ""
+  displayCards(ordenarDesc(dataGhibli))
 })
