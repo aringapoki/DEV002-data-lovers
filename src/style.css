@@ -153,6 +153,7 @@ h1 {
     margin: 0 auto;
     font-size: 1.6vw;
     max-width: 200px;
+    border: 1px solid red;
 }
 
 .parrafo {
