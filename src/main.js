@@ -100,6 +100,5 @@ orden.addEventListener("change",(e)=>{
     cards.innerHTML = ""
     displayCards(ordenarDesc(dataGhibli))
   }
-
 })
 
