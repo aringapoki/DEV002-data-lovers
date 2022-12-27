@@ -1,9 +1,12 @@
 # Studio Ghibli
 
+# Data Lovers
+
+# Studio Ghibli
 Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
 animados como **Mi vecino Totoro**, **El viaje de Chihiro** o
-**El castillo ambulante**, entre otros grandes éxitos.
 
+**El castillo ambulante**, entre otros grandes éxitos.
 Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
 varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
 interactuar y ver la información de las animaciones y sus personajes.
@@ -79,3 +82,8 @@ Definición de terminado: -Tuvo al menos un ciclo de feedback/iteración/mejora 
 
 Pasa los test (definir test según función implementada, en este caso sería calcular%) -El código se ha subido a git hub
 Está desplegado en git hub pages
+
+Una vez todo listo con los feedbacks y conformes con el resultado propuesto se procedió a realizar el prototipo de alta para las HU
+![Prototipo de alta tamaño de un computador](src/images/pantalla1-figma.jpg)
+![Prototipo de alta tamaño de un computador](src/images/prototipodealta.jpg)
+![Prototipo de alta tamaño de un movil](src/images/pantalla1-figmaresponsive.jpg)
