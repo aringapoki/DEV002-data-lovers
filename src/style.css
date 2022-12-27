@@ -5,62 +5,63 @@
 }
 
 body {
-    background-image: url("images/studio-ghibli-history-7.jpg");
-    object-fit: cover;
+    background-image: url("studio-ghibli-history-7.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     font-family: 'Black Han Sans', sans-serif;
     background-attachment: fixed;
+    margin: 0 auto;
 }
 
-.pantalla1 {
+.pantalla {
+    object-fit: cover;
+}
+
+header {
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    padding: 0px;
+    row-gap: 15rem;
+    margin: 30px 0;
+    max-height: 130px;
+}
+
+.logo {
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+    object-fit: contain;
 }
 
 h1 {
     color: white;
     text-align: center;
-    font-size: 6vw;
-    padding: 1.2em;
-    position: relative;
-    margin: auto;
+    background-position: center;
+    font-size: 50px;
+    margin: 70px 600px;
+    padding: 250px 70px 200px 70px;
 }
 
 #boton {
     border-radius: 50px;
-    color: #2b6b84;
-    background-color: #fbe3e3;
-    font-size: 2.5vw;
-    font-weight: bold;
-    font-family: 'Black Han Sans', sans-serif;
-    padding: 0.5em 2em;
-    border: 0.1em solid #b2a592;
-    background-size:contain;
-    width: fit-content;
-    position: relative;
-    margin: auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(208, 230, 199);
+    font-size: 20px;
+    padding: 0.5em 1em;
+    border: 1px solid #151618;
+    margin: 70px 900px;
+    width: 15%;
 }
 
-#boton:hover {
+#boton:hover{
     background-color: rgb(222, 231, 222);
 }
 
-
-.pantalla2 {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-}
-
-header {
+.funciones {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
@@ -69,15 +70,14 @@ header {
     object-fit: contain;
 }
 
+
 .header-peliculas {
     font-size: 2em;
     margin: 0 auto;
-    text-transform: uppercase;
-    color: #2b6b84;
 }
 
-.logo {
-    width: 30%;
+.header-peliculas {
+    font-size: 50px;
     margin: 0 auto;
     max-width: fit-content;;
 }
@@ -88,44 +88,10 @@ header {
     padding: 0.5em;
     border: 1px solid #eebef0;
     border-radius: 50px;
+    max-height: 60px;
     margin: auto;
     background-color: lightpink;
-    color: #2b6b84;
 
-}
-
-.funciones {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    margin: auto 0 4em 0;
-    align-items: center;
-    object-fit: contain;
-}
-
-.ordenarBuscar {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    width: fit-content;
-    color: #2b6b84;
-    padding: 1em;
-}
-
-.pFunciones {
-    font-size: 2.5vw;
-}
-
-.input {
-    background-color: #fbe3e3;
-    width: 30vw;
-    margin: auto;
-    border: 0.13em solid #f8eede;
-    border-radius: 0.5em;
-    font-size: 2vw;
-    padding: 0.3em;
-    font-weight: bold;
-    color: #2b6b84;
 }
 
 .cards {
@@ -136,9 +102,9 @@ header {
     row-gap: 1rem;
     gap: 20px;
     max-width: fit-content;
+
     justify-content: center;
     padding: 0%;
-    margin: auto;
 }
 
 /*.card:hover{
@@ -152,6 +118,7 @@ header {
 .imgDatos {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: fit-content;
     margin: 0px;
     padding: 1em;
@@ -169,10 +136,11 @@ header {
 }
 
 #poster {
-    width: 15vw;
-    height: auto;
+    width: 150px;
+    height: 500px;
+    max-width: 170px;
+    max-height: 200px;
     border-radius: 10%;
-    margin: auto;
 }
 
 .parrafos {
@@ -185,8 +153,8 @@ header {
 }
 
 .parrafo {
-    padding: 1em;
-    margin: auto;
+    padding: 4px;
+    margin: 20px;
     font-weight: bold;
     /*width: fit-content;*/
     height: fit-content;
@@ -199,14 +167,14 @@ header {
     text-align: center;
 }
 
-.modalContainer {
+.modalContainer{
     display: flex;
     background-color: rgba(0, 0, 0, 0.3);
     align-items: center;
     justify-content: center;
     position: fixed;
     pointer-events: none;
-    opacity: 0;
+    opacity: 0;  
     top: 0;
     left: 0;
     height: 100vh;
@@ -222,12 +190,12 @@ header {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
-}
-
+  }
+  
 .show {
     pointer-events: auto;
     opacity: 1;
-}
+  }
 
 .open {
     border-radius: 10px;
@@ -235,15 +203,14 @@ header {
     font-weight: bold;
     width: 12em;
     border: 3px solid #151618;
-    color: #2b6b84;
+    color: black;
     background-color: rgb(208, 230, 199);
     font-size: 15px;
-    padding: 0.3em;
+    padding: 5px
 }
 
 .open:hover {
-    background-color: rgb(206, 218, 206);
-    ;
+    background-color:rgb(206, 218, 206); ;
 }
 
 .close {
@@ -251,16 +218,16 @@ header {
     text-transform: uppercase;
     font-weight: bold;
     width: 50%;
-    margin: 1em 5em;
+    margin: 40px 50px;
     border: 3px solid #151618;
-    color: #2b6b84;
+    color: black;
     background-color: rgb(208, 230, 199);
     font-size: 15px;
     padding: 5px
 }
 
 .close:hover {
-    background-color: rgb(206, 218, 206);
+    background-color:rgb(206, 218, 206); 
 }
 
 
